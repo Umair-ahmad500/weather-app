@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌦️ Weather App</h1>
+
+        <p>Check the current weather of any city.</p>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="city"
+                placeholder="Enter city name"
+                required
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        {% if error %}
+
+            <div class="error">
+                {{ error }}
+            </div>
+
+        {% endif %}
+
+
+        {% if weather %}
+
+            <div class="weather-card">
+
+                <h2>{{ weather.city }}</h2>
+
+                <h3>{{ weather.condition }}</h3>
+
+                <div class="temperature">
+                    {{ weather.temperature }}°C
+                </div>
+
+                <p>
+                    Feels like:
+                    {{ weather.feels_like }}°C
+                </p>
+
+                <p>
+                    💧 Humidity:
+                    {{ weather.humidity }}%
+                </p>
+
+                <p>
+                    💨 Wind:
+                    {{ weather.wind }} km/h
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
