@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf6ff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+input {
+    padding: 12px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.weather-card {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+}
+
+.temperature {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 10px;
+}

@@ -41,10 +41,9 @@ def home():
             error = "Something went wrong. Please try again."
 
     return render_template(
-        "index.html",
-        weather=weather,
-        error=error
-    )
+        "index.html")
+        
+    
 
 
 if __name__ == "__main__":
